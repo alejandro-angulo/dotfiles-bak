@@ -11,5 +11,6 @@ override_utf8_locale yes
 TEXT
 ,[{"full_text": " ❤ $acpitemp°C [$cpu%] ","color": "\#DC322F"},
   {"full_text": " ≣ [$membar] ", "color":"\#B58900"},
+  {"full_text": " ▶ ${exec ~/.i3/spotify} ", "color":"\#3F7FBF"},
   {"full_text": " ${time %a %d %b} ${time %I:%M} "}
 ]
