@@ -9,7 +9,7 @@ syntax on
 
 " NERDTree
 nmap <silent> <C-D> :NERDTreeToggle<CR>
-nnoremap <silen> <C-L> :noh<CR><C-L>
+nnoremap <silent> <C-L> :noh<CR><C-L>
 
 " Use tabs for makefile
 autocmd Filetype make setlocal noexpandtab
