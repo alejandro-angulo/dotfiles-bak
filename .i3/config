@@ -33,7 +33,7 @@ bindsym $mod+c kill
 bindsym $mod+p exec "dmenu_run -nb black -p run"
 
 # screen lock
-bindsym Control+$mod+l exec betterlockscreen -l dim
+bindsym Control+$mod+l exec --no-startup-id betterlockscreen -l dim
 
 # change focus
 bindsym $mod+h focus left

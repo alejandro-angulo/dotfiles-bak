@@ -4,11 +4,20 @@ set mouse=a
 set expandtab
 set number
 set autoindent
+set tags=tags;/
 filetype plugin on
 syntax on
 
-" NERDTree
+" Toggle NERDTree
 nmap <silent> <C-D> :NERDTreeToggle<CR>
+
+"
+nnoremap <leader>. :CtrlPTag<CR>
+
+" Toggle Tagbar
+nnoremap <silent> <leader>b :TagbarToggle<CR>
+
+" Turn of highlighting (until next search)
 nnoremap <silent> <C-L> :noh<CR><C-L>
 
 " Use tabs for makefile
