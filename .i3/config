@@ -3,7 +3,7 @@ set $mod Mod4
 font xft:Inconsolata Medium 8.5
 
 # startup
-exec nm-applet &
+exec wicd-gtk -t &
 exec dropbox &
 exec ~/.i3/wall
 
