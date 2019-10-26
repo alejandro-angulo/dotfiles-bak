@@ -1,5 +1,5 @@
 shopt -s nullglob
-wall_dir="$HOME/data/Dropbox/walls"
+wall_dir="$HOME/Dropbox/walls"
 refresh_rate="15m"
 
 while true; do
