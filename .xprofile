@@ -1,1 +1,2 @@
+xrandr --output DisplayPort-0-8 --rotate right
 xrandr --output DisplayPort-0-8 --right-of DisplayPort-0-1
