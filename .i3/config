@@ -2,9 +2,14 @@ set $mod Mod4
 
 font xft:Inconsolata Medium 8.5
 
+# workspace setup
+workspace "1: q" output "DisplayPort-0-1"
+workspace "9: o" output "DisplayPort-0-8"
+
 # startup
 exec dropbox &
 exec ~/.i3/wall
+exec --no-startup-id i3-msg 'workspace 1: q; exec /usr/bin/firefox;workspace 9: o; exec /usr/bin/spotify'
 
 new_window pixel 3
 focus_follows_mouse  no
