@@ -8,7 +8,7 @@ workspace "9: o" output "DisplayPort-0-8"
 
 # startup
 exec dropbox &
-exec ~/.i3/wall
+exec --no-startup-id nitrogen --restore
 exec --no-startup-id i3-msg 'workspace 1: q; exec /usr/bin/firefox;workspace 9: o; exec /usr/bin/spotify'
 
 new_window pixel 3
