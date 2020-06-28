@@ -5,8 +5,22 @@ set expandtab
 set number
 set autoindent
 set tags=tags;/
+set laststatus=2
 filetype plugin on
 syntax on
+
+" Powerline
+python3 from powerline.vim import setup as powerline_setup
+python3 powerline_setup()
+python3 del powerline_setup
+
+" vim-plug
+call plug#begin('~/.vim/plugged')
+
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+Plug 'preservim/nerdtree'
+
+call plug#end()
 
 " Toggle NERDTree
 nmap <silent> <C-D> :NERDTreeToggle<CR>
@@ -24,8 +38,10 @@ nnoremap <silent> <C-L> :noh<CR><C-L>
 autocmd Filetype make setlocal noexpandtab
 
 " Colorscheme
-set background=dark
-colorscheme base16-3024
+if filereadable(expand("~/.vimrc_background"))
+  let base16colorspace=256
+    source ~/.vimrc_background
+endif
 
 " Easier split navigation
 nmap <silent> <c-k> :wincmd k<CR>
@@ -54,3 +70,4 @@ endfunction
 
 nmap <silent> <leader>mv :call MarkWindowSwap()<CR>
 nmap <silent> <leader>pw :call DoWindowSwap()<CR>
+
