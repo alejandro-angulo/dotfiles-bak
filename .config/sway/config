@@ -33,8 +33,8 @@ client.unfocused        $gray1    $gray2    $white    $black
 
 ### Output configuration
 #
-# Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
+set $wallpapers_path /home/alejandro/walls
+output * bg `find $wallpapers_path -type f | shuf -n1` fill
 #
 # Example configuration:
 #
