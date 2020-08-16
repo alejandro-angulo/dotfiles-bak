@@ -100,8 +100,8 @@ exec mako
     bindsym $mod+Shift+z exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -b 'Yes, exit sway' 'swaymsg exit'
 
     # Multimedia keys
-    bindsym XF86AudioRaiseVolume exec "pamixer --increase 1"
-    bindsym XF86AudioLowerVolume exec "pamixer --decrease 1"
+    bindsym XF86AudioRaiseVolume exec "pamixer --increase 5"
+    bindsym XF86AudioLowerVolume exec "pamixer --decrease 5"
     bindsym XF86AudioMute exec "pamixer --toggle-mute"
 
     # Backlight keys
