@@ -12,9 +12,13 @@ set nocompatible
 filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
+" Eye Candy
 Plugin 'chriskempson/base16-vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
+
+" Comment Code
+Plugin 'preservim/nerdcommenter'
 call vundle#end()
 filetype plugin indent on
 
