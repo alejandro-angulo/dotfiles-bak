@@ -96,9 +96,6 @@ exec mako
     # Reload the configuration file
     bindsym $mod+z reload
 
-    # Exit sway (logs you out of your Wayland session)
-    bindsym $mod+Shift+z exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -b 'Yes, exit sway' 'swaymsg exit'
-
     # Multimedia keys
     bindsym XF86AudioRaiseVolume exec "pamixer --increase 5"
     bindsym XF86AudioLowerVolume exec "pamixer --decrease 5"
@@ -215,6 +212,39 @@ mode "resize" {
     bindsym Escape mode "default"
 }
 bindsym $mod+s mode "resize"
+
+#
+# Swaynag keyboard controls:
+#
+set $nag exec swaynagmode
+mode "nag" {
+  bindsym {
+    Ctrl+d    mode "default"
+
+    Ctrl+c    $nag --exit
+    q         $nag --exit
+    Escape    $nag --exit
+
+    Return    $nag --confirm
+
+    j         $nag --select next
+    k         $nag --select prev
+
+    Tab       $nag --select next
+    Shift+Tab $nag --select prev
+
+    Left      $nag --select prev
+    Right     $nag --select next
+
+    Up        $nag --select prev
+    Down      $nag --select next
+  }
+}
+
+# Exit sway (logs you out of your Wayland session)
+bindsym $mod+Shift+z $nag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -b 'Yes, exit sway' 'swaymsg exit' -b 'Reload' 'swaymsg reload'
+
+swaynag_command $nag -R
 
 #
 # Misc:
